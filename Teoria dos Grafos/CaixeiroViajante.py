@@ -7,7 +7,7 @@ def NEARESTNEIGHBOR(listaAdj,matAdj):
     naoVisitados.remove(naoVisitados[0])
 
     u = 0  //Vértice inicial do circuito hamiltoniano 
-    S = [u]  //Lista que contém a sequência da vértices do ciclo hamiltoniano (inicialmente contem u) 
+    S = [u]  //Lista que contém a sequência da vértices do ciclo hamiltoniano(inicialmente contem u) 
 
     while(len(naoVisitados) != 0):
         V = 0
