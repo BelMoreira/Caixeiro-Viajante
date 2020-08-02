@@ -62,7 +62,7 @@ def TWOOPT(S, matAdj):
             s[i1] = s[i2]  //Trocar elemento da posição i1 com elemento de i2 
             s[i2] = aux
             if AVALIA(s,matAdj) < AVALIA(S,matAdj):
-                S = s.copy()  //s é melhor que a melhor solução corrente s, que é atualizada
+                S = s.copy()  //s é melhor que a melhor solução corrente S, que é atualizada
 
     print('Distância 2opt : {}'.format(AVALIA(S, matAdj)))
     print('Rota : {}'.format(S))
