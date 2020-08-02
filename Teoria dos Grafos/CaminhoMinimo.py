@@ -20,17 +20,17 @@ def DIJSKSTRA(matAdj, s, t):
 
     dist[s] = 0
 
-    # Conjunto de vertices que seram processados
+    # Conjunto de vértices que seram processados
     Q = [x for x in range(len(matAdj))]
 
     while (len(Q)!=0):
         minimo = 999999
         for i in Q:
             if dist[i] <= minimo:
-                # u : vertice de menor distancia dentre os vértices de Q
+                # u : vértice de menor distância dentre os vértices de Q
                 u = i
                 minimo = dist[i]
-        Q.remove(u) # Removendo vértice u de Q (depois de processado)
+        Q.remove(u) # Removendo vértice u de Q(depois de processado)
 
         for i in range(len(matAdj)):
             v = i
@@ -51,7 +51,7 @@ def BELLMANFORD(matAdj, s, t,E):
     vago = ('-')
     # Atribui infinito ao vetor que armazena a distância da origem a cada vértice
     dist = [inf for x in range(len(matAdj))]
-    # Atribui nulo ao vetor que vetor que indica o predecessor de cada vértice no caminho míni
+    # Atribui nulo ao vetor que vetor que indica o predecessor de cada vértice no caminho mínimo
     pred = [vago for x in range(len(matAdj))]
 
     dist[s] = 0
@@ -78,7 +78,7 @@ def BELLMANFORD(matAdj, s, t,E):
             return False
     return True
 
-# Retornar o caminho minimo a partir da matriz de predecessores
+# Retornar o caminho mínimo a partir da matriz de predecessores
 def CAMINHO2(s, t, pred):
     C = []
     C += [t]
